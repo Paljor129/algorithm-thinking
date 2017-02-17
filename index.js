@@ -6,10 +6,11 @@ console.log(panierTxt);
 // var btnTxt = document.createElement("p");
 // btnTxt.innerHTML = "<p>panier</p>";
 head.appendChild(btnPan);
-btnPan.appendChild(panierTxt);
+btnPan.appendChild(panierTxt)
 document.body.appendChild(head);
 btnPan.style.float = "right";
 head.style.margin = "20px";
+
 
 var main = document.createElement("div");
 main.classList.add("containerPlats");
@@ -32,6 +33,11 @@ function myMenu(plats){
     var btnTxt = document.createTextNode("Order")
     console.log(btnTxt);
 
+    btn.addEventListener("click", function pan() {
+      console.log(btn);
+      alert("helo gombot");
+    });
+
     id.innerHTML = plats[i].id;
     nom.innerHTML = plats[i].nom;
     description.innerHTML = plats[i].description;
@@ -41,7 +47,6 @@ function myMenu(plats){
 
     main.style.display = "flex";
     main.style.justifyContent = "center";
-    // main.style.float = "none"
     div.style.textAlign = "center";
     div.style.height = "250px";
     div.style.width = "200px";
@@ -68,10 +73,12 @@ myMenu(content);
 
 
 
+
+
 // $("#myButton").click(function () {
 //     var test = $('<button>Test</button>').click(function () {
 //         alert('hi');
 //     });
     // $("#nodeAttributeHeader").attr('style', 'display: table-row;');
     // $("#addNodeTable tr:last").before('<tr><td>' + test.html() + '</td></tr>');
-// });
+// })
